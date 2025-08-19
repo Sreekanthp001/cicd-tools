@@ -1,19 +1,21 @@
-data "aws_ami" "jondevops" {
-    most_recent = true 
+
+data "aws_ami" "joindevops" {
+
+    most_recent = true
     owners = ["973714476881"]
 
     filter {
-        name = "name"
+        name   = "name"
         values = ["RHEL-9-DevOps-Practice"]
     }
 
     filter {
-        name = "root-device-type"
+        name   = "root-device-type"
         values = ["ebs"]
     }
 
     filter {
-        name = "virtualization-type"
+        name   = "virtualization-type"
         values = ["hvm"]
     }
 }
