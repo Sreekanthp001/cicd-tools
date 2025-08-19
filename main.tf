@@ -2,7 +2,7 @@ resource "aws_instance" "jenkins" {
     ami           = local.ami_id
     instance_type = "t3.small"
     vpc_security_group_ids = [aws_security_group.main.id]
-    subnet_id = "   " #replace with your subnet
+    subnet_id = " subnet-062f4b2a4d5f804c4  " #replace with your subnet
 
     # need more for terraform 
     root_block_device {
@@ -22,7 +22,7 @@ resource "aws_instance" "jenkins_agent" {
     ami                = local.ami_id
     instance_type      = "t3.medium"
     vpc_security_group_ids = [aws_security_group.main.id]
-    subnet_id = "s " #replace with your subnet
+    subnet_id = "subnet-062f4b2a4d5f804c4" #replace with your subnet
 
     # need more for terraform
     root_block_device {
